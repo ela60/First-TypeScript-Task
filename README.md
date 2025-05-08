@@ -24,7 +24,7 @@ In TypeScript, both `interface` and `type` can be used to describe the shape of 
 
 
 # any – The Escape Hatch
-The any type disables all type checking for a variable. When you use any, you're telling TypeScript to trust you and not complain, even if your code might lead to runtime errors.
+🔹The any type disables all type checking for a variable. When you use any, you're telling TypeScript to trust you and not complain, even if your code might lead to runtime errors.
 
 ts
 Copy
@@ -33,5 +33,5 @@ Edit
 🔸 unknown – Safer Alternative to any
 The unknown type is similar to any in that it can hold any value, but it doesn’t let you do anything with the value until you perform a type check. This makes it much safer than any
 
- never – For Code That Shouldn’t Happen
+⚠️never – For Code That Shouldn’t Happen
 The never type represents values that should never occur. It's used for situations where a function doesn't return (e.g., it always throws an error), or when you're ensuring exhaustive checks in control structures.
