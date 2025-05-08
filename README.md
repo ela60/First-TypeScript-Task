@@ -23,7 +23,8 @@ In TypeScript, both `interface` and `type` can be used to describe the shape of 
 
 
 
-# any – The Escape Hatch
+# any unknown never – The Escape Hatch
+
 🔹The any type disables all type checking for a variable. When you use any, you're telling TypeScript to trust you and not complain, even if your code might lead to runtime errors.
 
 ts
