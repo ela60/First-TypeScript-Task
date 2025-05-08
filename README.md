@@ -25,27 +25,15 @@ interface User {
   email: string;
 }
 
-# 📘 Understanding `any`, `unknown`, and `never` in TypeScript
+# any – The Escape Hatch
+The any type disables all type checking for a variable. When you use any, you're telling TypeScript to trust you and not complain, even if your code might lead to runtime errors.
 
-TypeScript offers advanced types to handle different situations safely and clearly. Let's explore the differences between `any`, `unknown`, and `never`.
+ts
+Copy
+Edit
 
----
+🔸 unknown – Safer Alternative to any
+The unknown type is similar to any in that it can hold any value, but it doesn’t let you do anything with the value until you perform a type check. This makes it much safer than any
 
-## 🔍 Type Comparison Table
-
-| Type     | Description                                | Safe? | When to Use                                 |
-|----------|--------------------------------------------|-------|---------------------------------------------|
-| `any`    | Opts out of type checking                  | ❌    | Prototyping or migrating from JavaScript    |
-| `unknown`| Accepts any value, but must be type-checked| ✅    | Handling unknown or dynamic input           |
-| `never`  | Represents values that never occur         | ✅    | Exhaustive checks or error-throwing funcs   |
-
----
-
-## 🔹 `any` – The Escape Hatch
-
-The `any` type disables type checking for a variable. It's like telling TypeScript: "Trust me, I know what I'm doing."
-
-```ts
-let value: any = "hello";
-value = 10;
-value.toUpperCase(); // No error, but could fail at runtime
+ never – For Code That Shouldn’t Happen
+The never type represents values that should never occur. It's used for situations where a function doesn't return (e.g., it always throws an error), or when you're ensuring exhaustive checks in control structures.
