@@ -15,15 +15,13 @@ In TypeScript, both `interface` and `type` can be used to describe the shape of 
 - Ideal for **object-oriented programming** and when working with class-based structures.
 - **Merges declarations** — multiple `interface` declarations with the same name are automatically merged (great for augmenting types).
 
-```ts
-interface User {
+##
+ - interface User {
   name: string;
   age: number;
 }
 
-interface User {
-  email: string;
-}
+
 
 # any – The Escape Hatch
 The any type disables all type checking for a variable. When you use any, you're telling TypeScript to trust you and not complain, even if your code might lead to runtime errors.
